@@ -34,7 +34,7 @@ function Eduction() {
     className="vertical-timeline-element--work  "
     contentStyle={{ background: '#161a2f',    boxShadow:'none'}}
     contentArrowStyle={{ borderRight: '7px solid  #161a2f' }}
-    date="2011 - present"
+    date="2023 - present"
     visible={true} 
     iconStyle={{ background: '#1a1443', color: '#fff' }}
     icon={<FaUniversity />}

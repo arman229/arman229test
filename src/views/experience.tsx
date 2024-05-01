@@ -1,17 +1,28 @@
-// @flow strict
+'use client'
 
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "@/components/animation-lottie";
 import GlowCard from "@/components/helper/glow-card";
-import lottieFile from '/lottie/study.json';
+import lottieFile from '../app/lottie/code.json';
+import Lottie from "lottie-react";
+ 
 
 function Experience() {
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: lottieFile,
+    style: {
+      width: '95%',
+    }
+  };
   return (
     <div id="experience" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <Image
-        src="/section.svg"
+        src={'/images/experience/section.svg'}
         alt="Hero"
         width={1572}
         height={795}
@@ -32,7 +43,8 @@ function Experience() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
             <div className="w-full h-full">
-              {/* <AnimationLottie animationPath={experience} /> */}
+            <Lottie {...defaultOptions} />
+
             </div>
           </div>
 
@@ -43,7 +55,7 @@ function Experience() {
                   <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
                     <div className="p-3 relative">
                       <Image
-                        src="/blur-23.svg"
+                        src={'/images/experience/blur-23.svg'}
                         alt="Hero"
                         width={1080}
                         height={200}
